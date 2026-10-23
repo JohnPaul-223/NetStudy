@@ -102,7 +102,7 @@ body{font-size:16px;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-ad
 .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 }/* Compact mobile quiz controls while keeping labels accessible. */
 @media(max-width:700px){
-.qhead{gap:6px}
+.qhead:not(:has(.chip)){display:grid;grid-template-columns:minmax(max-content,1fr) auto minmax(max-content,1fr);gap:6px;align-items:center}.qhead:not(:has(.chip))>:first-child{justify-self:start}.qhead:not(:has(.chip))>.grow{grid-column:2;grid-row:1;text-align:center;white-space:nowrap}.qhead:not(:has(.chip))>button:last-child{grid-column:3;justify-self:end}.qhead:has(.chip){display:flex;flex-wrap:wrap}.qhead:has(.chip) .grow{flex:1 1 auto}
 .qhead .btn{min-height:44px;padding:8px 9px;font-size:13px;white-space:nowrap}
 .qhead .grow{min-width:0;text-align:center;font-size:clamp(13px,3.8vw,15px);line-height:1.2;overflow-wrap:anywhere}
 .quiz-main{display:flex;flex-direction:column;gap:10px}
